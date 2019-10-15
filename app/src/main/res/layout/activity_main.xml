@@ -5,7 +5,7 @@
 
     -<LinearLayout android:orientation="horizontal" android:gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_weight="1">
 
-    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_weight="0" android:id="@+id/currentVal"/>
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_weight="0" android:id="@+id/TextViewCurrentValue"/>
 
 </LinearLayout>
 
@@ -22,18 +22,21 @@
         android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="calculateOnClick"
         android:text="1" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="calculateOnClick"
         android:text="2" />
 
     <Button
         android:id="@+id/btnSub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="calculateOnClick"
         android:text="3" />
 
 </TableRow>
@@ -45,18 +48,21 @@
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="calculateOnClick"
         android:text="4" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="calculateOnClick"
         android:text="5" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="calculateOnClick"
         android:text="6" />
 </TableRow>
 
@@ -67,18 +73,21 @@
         android:id="@+id/btnMultiply"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="calculateOnClick"
         android:text="7" />
 
     <Button
         android:id="@+id/button8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="calculateOnClick"
         android:text="8" />
 
     <Button
         android:id="@+id/btnDivide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="calculateOnClick"
         android:text="9" />
 
 </TableRow>
@@ -91,6 +100,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:onClick="calculateOnClick"
         android:text="0" />
 
 </TableRow>
@@ -101,8 +111,10 @@
         android:id="@+id/button41"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:text="OPS" />
+        android:layout_weight="0"
+        android:onClick="toOps"
+        android:text="OPS"
+        android:textAlignment="center" />
 
 </LinearLayout>
 
