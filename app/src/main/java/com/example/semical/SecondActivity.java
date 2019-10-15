@@ -25,13 +25,19 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void goBack(View view) {
+        Intent intent = new Intent();
+
         Button opsBtn = (Button) findViewById(view.getId());
         String operand = opsBtn.getText().toString();
 
         String num1 = getIntent().getStringExtra("NUM1");
         TextViewCurrentValue.setText(num1 + operand);
 
-        Intent intentBack = new Intent(this, MainActivity.class);
-        intentBack.putExtra("OPS", operand);
+        intent.putExtra("OPS", opsBtn.getText());
+
+
+        setResult(RESULT_OK, intent);
+
+        finish();
     }
 }
