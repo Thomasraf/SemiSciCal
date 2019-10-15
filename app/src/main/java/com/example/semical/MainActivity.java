@@ -25,12 +25,19 @@ public class MainActivity extends AppCompatActivity {
         String sign = intent.getStringExtra("OPS");
         String number1 = TextViewValue.getText().toString();
         TextViewValue.setText(number1 + sign);
+
+        String completeString = TextViewValue.getText().toString();
+
+        if(sign.equals("=")){
+            completeString.split("[*-+/]");
+        }
     }
 
     public void calculateOnClick(View view) {
         Button pressed = (Button) findViewById(view.getId());
         String value = pressed.getText().toString();
-        TextViewValue.setText(value + "");
+        String oldvalue = (String) TextViewValue.getText();
+        TextViewValue.setText(oldvalue + value);
     }
 
     public void toOps(View view) {
@@ -39,8 +46,7 @@ public class MainActivity extends AppCompatActivity {
         String number1 = TextViewValue.getText().toString();
         intent.putExtra("NUM1", number1);
 
-
-        startActivity(intent);
+        startActivityForResult(intent, 0);
     }
 
 
