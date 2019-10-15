@@ -29,7 +29,9 @@ public class MainActivity extends AppCompatActivity {
         String completeString = TextViewValue.getText().toString();
 
         if(sign.equals("=")){
-            completeString.split("[*-+/]");
+            String[] arr = completeString.split("[*-+/]");
+            int newNum = Integer.parseInt(arr[0]) + Integer.parseInt(arr[1]);
+            TextViewValue.setText(Integer.toString(newNum));
         }
     }
 
