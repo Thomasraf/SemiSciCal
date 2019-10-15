@@ -23,15 +23,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
         String sign = intent.getStringExtra("OPS");
-        String number1 = TextViewValue.getText().toString();
-        TextViewValue.setText(number1 + sign);
-
         String completeString = TextViewValue.getText().toString();
 
         if(sign.equals("=")){
             String[] arr = completeString.split("[*-+/]");
             int newNum = Integer.parseInt(arr[0]) + Integer.parseInt(arr[1]);
             TextViewValue.setText(Integer.toString(newNum));
+        }else{
+            String number1 = TextViewValue.getText().toString();
+            TextViewValue.setText(number1 + sign);
         }
     }
 
